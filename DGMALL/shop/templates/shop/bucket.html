@@ -1,0 +1,102 @@
+{% extends "index.html" %}
+
+<!-- Add Title Here -->
+{% block title %}Bucket{% endblock title %}
+
+<!-- Add CSS Here -->
+{% block css %}
+  {% load static %}
+  <link rel="stylesheet" href=" {% static 'shop/CSS/bucket.css' %} ">
+{% endblock css %}
+
+<!-- Add Body Here -->
+{% block body %}
+<div class="cartcontainer">
+  <div class="cartitems bg">
+      <div class="heading bg">
+          <div class="headingItem"><b>Product</b></div>
+          <div class="headingItem"><b>Size</b></div>
+          <div class="headingItem"><b>Qty</b></div>
+          <div class="headingItem"><b>Subtotal</b></div>
+          <div class="headingItem wi"><b>Order</b></div>
+      </div>
+      <div class="productItem" id="itemscart">
+          
+      </div>
+      <div class="grandTotal bg">
+          <div class="clear"><button class='btn' id="clear">Clear Cart <i class="fas fa-trash"></i></button></div>
+          <div class="grand">Total</div>
+          <div class="amount" id="amount">&#X20B9; 0</div>
+      </div>
+  </div>
+</div>
+
+{% endblock body %}
+
+<!-- Add JS Here -->
+{% block js %}
+  <script>
+    if (localStorage.getItem('cart') == null) {
+      var cart = {};
+    } else {
+      cart = JSON.parse(localStorage.getItem('cart'));
+    }
+    var grandTotal = 0
+    for (item in cart) {
+      let qty = cart[item][0];
+      let name = cart[item][1];
+      let img = cart[item][2];
+      let color = cart[item][5];
+      let price = cart[item][3];
+      let size = cart[item][4];
+      let seller = cart[item][7];
+      let selleremail = cart[item][8];
+      let sellerphone = cart[item][9];
+      var subtotal = cart[item][6];
+      mystr = `<div class="row bg">
+                  <div class="contant">
+                      <img src="${img}">
+                      <div class="det">
+                          <p class=pname>${name}</p>
+                          <b>&#x20B9; ${price}</b>
+                      </div>
+                  </div>
+                  <div class="contant">
+                      <input type="text" name="size" id="size${item}" value="${size}">
+                  </div>
+                  <div class="contant">
+                      <p><strong class="subtotal tot" id="qty${item}">${qty}</strong></p>
+                  </div>
+                  <div class="contant">
+                      <p>&#x20B9;<strong class="subtotal tot" id="sub${item}">${subtotal}</strong></p>
+                  </div>
+                  <form action="{% url 'order' %}" enctype="multipart/form-data" method="POST">
+                      {% csrf_token %}
+                      <input type="hidden" name="name" id="name${item}" value="${name}">
+                      <input type="hidden" name="img" id="img${item}" value="${img}">
+                      <input type="hidden" name="qty" id="qty${item}" value="${qty}">
+                      <input type="hidden" name="size" id="size${item}" value="${size}">
+                      <input type="hidden" name="color" id="color${item}" value="${color}">
+                      <input type="hidden" name="subtotal" id="subtotal${item}" value="${subtotal}">
+                      <input type="hidden" name="seller" id="seller${item}" value="${seller}">
+                      <input type="hidden" name="selleremail" id="selleremail${item}" value="${selleremail}">
+                      <input type="hidden" name="sellerphone" id="sellerphone${item}" value="${sellerphone}">
+                      <input type="hidden" name="user" id="user${item}" value="{{request.user.userdetails.User}}">
+                      <input type="hidden" name="useremail" id="useremail${item}" value="{{request.user.userdetails.Email}}">
+                      <input type="submit" class="btn" id="order${item}" value="Order">
+                  </form>
+              </div>`;
+      $('#itemscart').append(mystr);
+      grandTotal = grandTotal + subtotal;
+      document.getElementById('amount').innerHTML = `&#x20B9; ${grandTotal}`;
+      $('#clear').click(function () {
+        localStorage.clear(cart);
+        grandTotal = 0;
+        document.getElementById('amount').innerHTML = `&#x20B9; ${grandTotal}`;
+        document.getElementById('itemscart').innerHTML = "";
+        document.getElementById('cart').innerHTML = 0;
+      });
+    }
+      
+  </script>
+{% endblock js %}

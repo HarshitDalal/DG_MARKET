@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;700&family=Lobster&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-BalooBhai2: 'Baloo Bhai 2', cursive;
+    --font-Lobster: 'Lobster', cursive;
+}
+$font1: var(--font-BalooBhai2);
+$font2: var(--font-Lobster);
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 2.5rem;
+    margin: 1rem 0;
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .swiper-container{
+            width: 30%;
+        }
+        .profile-cart{
+            width: 40%;
+            background: #ecc4e0bf;
+            border-radius: 2.8rem;
+            padding-top: 2rem;
+            text-align: center;
+            .dp{
+                margin: .2rem;
+                border-radius: 50%;
+                img{
+                    border-radius: 50%;
+                    width: 17rem;
+                }
+            }
+            .name {
+                text-align: center;
+                font-family: $font1;
+                font-size: 2.4rem;
+                line-height: 1.2;
+                color: indigo;
+                margin: .2rem auto;
+                padding: 0.1rem 0.4rem 1.2rem 0.2rem;
+                width: 50%;
+            }
+            .skills {
+                font-size: 1.5rem;
+                font-family: $font2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 1rem;
+                width: 100%;
+                letter-spacing: 0.4rem;
+                .line{
+                    display: inline-block;
+                    height: .2rem;
+                    background: linear-gradient(90deg, black, red,blue,green,yellow);;
+                    width: 68%;
+                    margin-bottom: 2rem;
+                }
+                .font-p{
+                    color: white;
+                    background: steelblue;
+                    padding: 0 .3rem;
+                    border-radius: .8rem;
+                    text-align: center;
+                }  
+            }
+            .info-social {
+                width: 100%;
+                text-align: center;
+                background: linear-gradient(180deg, #af6ac5, #4daac5);
+                border-bottom-left-radius: 2.8rem;
+                border-bottom-right-radius: 2.8rem;
+                position: relative;
+                top: 8rem;
+                .info-p {
+                    font-size: 1.5rem;
+                    font-family: $font2;
+                    padding: 2rem 1rem;
+                    color: white;
+                }
+            }
+            .social {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                font-size: 2.4rem;
+                transition: all 0.2s;
+                opacity: 0;
+                background: #62779cc7;
+                width: 100%;
+                height: 8rem;
+                border-bottom-left-radius: 2.8rem;
+                border-bottom-right-radius: 2.8rem;
+                margin-bottom: 0;
+                .hendal{
+                    padding: .7rem .5rem;
+                    width: 4rem;
+                    height: 4rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    color: white;
+                    cursor: pointer;
+                    background: black;
+                    border-radius: 50%;
+                    z-index: 10;
+                }
+            }
+        }
+        .profile-cart:hover .social{
+            opacity: 1;
+        }
+        .profile-cart:hover .info-social{
+            opacity: 0;
+        }
+        .about-us {
+            width: 50%;
+            text-align: center;
+            .wave{
+                font-family: $font1;
+                font-size: 6rem;
+                .hi{
+                    color: red;
+                    line-height: .8;
+                }
+            }
+            .do{
+                font-family: $font1;
+                font-size: 2rem;
+            }
+            .btn{
+                text-decoration: none;
+                font-family: $font1;
+                font-size: 1.5rem;
+                background: rgba(199, 11, 158, 0.897);
+                padding: 0 2rem;
+                margin: 1.3rem 2rem;
+                color: rgb(240, 233, 232);
+                line-height: 3;
+                border-radius: 2rem;
+            }
+            .pera{
+                font-size: 1.4rem;
+                font-family: $font1;
+                width: 85%;
+                margin: 1rem auto;
+                word-spacing: .1rem;
+            }
+            .pera:nth-child(2n){
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:768px){
+    .about{
+        height: 100%;
+        .container{
+            flex-direction: column;
+            margin: 1rem 0;
+            .swiper-container{
+                width: 100%;
+            }
+            .profile-cart{
+                width: 70%;
+                .social{
+                    opacity: 1;
+                }
+                .info-social{
+                    opacity: 0;
+                }
+            }
+            .about-us{
+                width: 70%;
+            }
+        }
+    }
+}

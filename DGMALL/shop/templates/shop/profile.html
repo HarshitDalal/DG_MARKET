@@ -1,0 +1,70 @@
+{% extends "index.html" %}
+{% load static %}
+
+<!-- Add Title Here -->
+{% block title %}Profile{% endblock title %}
+
+<!-- Add CSS Here -->
+{% block css %}
+  <link rel="stylesheet" href=" {% static 'shop/CSS/profile.css' %} ">
+{% endblock css %}
+
+<!-- Add Body Here -->
+{% block body %}
+  {% load account %}
+  {% load socialaccount %}
+  <div class="progilecontainer">
+    <div class="profilecontant bg">
+        <div class="userimg">
+            <div class="img bg">
+              {% if not request.user.userdetails.Profile_Pic %}
+                <img class="bg" style="padding: 0;" src="" alt="Upload Your Image or Load Your Image">
+              {% else %}
+                <img class="bg" style="padding: 0;" src="{{request.user.userdetails.Profile_Pic.url}}" alt="Upload Your Image or Load Your Image">
+              {% endif %}
+            </div>
+            <div class="backbuttons bg">
+                <a href="{% url 'home' %}" class="btn">Back To Home</a>
+                <a href="{% url 'changepassword' %}" class="btn">Password Change</a>
+                {% comment %} <a href="{% url '' %}" class="btn">Email Varify</a> {% endcomment %}
+                <a href="{% url 'logout' %}" class="btn">Logout</a>
+                {% if request.user.is_superuser %}
+                  <a href="/admin/" class="btn">Admin Page</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="userform bg">
+            <form action="" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              {% for f in fm %}
+                <div class="userentries">
+                    <label for="">
+                        <span class="placeholder">{{f.label_tag}}</span>
+                        {{f}}
+                    </label>
+                </div>
+              {% endfor %}
+              <div class="userentries">
+                  <label for="">
+                      <input type="submit" value="Save">
+                  </label>
+              </div>
+            </form>
+        </div>
+    </div>
+  </div>
+{% endblock body%}
+<!-- Add JS Here -->
+{% block js %}
+  <script>
+    let options = document.querySelectorAll('#id_User option');
+    options.forEach((value,index)=>{
+      if (options[index].innerHTML == "{{request.user}}"){
+        return;
+      } else {
+        options[index].style.display = 'none';
+      }
+    });
+
+  </script>
+{% endblock js %}

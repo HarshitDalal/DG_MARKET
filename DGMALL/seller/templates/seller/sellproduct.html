@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Seller Product
+{% endblock title %}
+
+{% block css %}
+{% load static %}
+  <link rel="stylesheet" href="{% static 'seller/CSS/sellproduct.css' %}">
+{% endblock css %}
+
+{% block body %}
+{% load account %}
+  <section class="sellproduct">
+    <div class="head bg">
+        <h1 class="heading ">-- Sell Your Product Here --</h1>
+        <h1 class="note">All Fildes Are Required</h1>
+    </div>
+    <form action="" enctype="multipart/form-data" method="POST" class="bg">
+        {% csrf_token %}
+
+        <div class="product-image">
+            <div class="main-image">
+                <img id="main" src="https://bit.ly/3ubuq5o" alt="Drag & Drop To Upload Image"> 
+            </div>
+            <div class="other-image">
+                <div class="imgo active">
+                    <button class="btn browse">Browse Image</button>
+                    <div class="contant">
+                        <img src="https://bit.ly/3ubuq5o" class="imgo1 active" height="100%" alt="Image">
+                    </div>
+                    <input required class="file" name="file1" id="file1" type="file">
+                </div>
+                <div class="imgo">
+                    <button class="btn browse">Browse Image</button>
+                    <div class="contant">
+                        <img src="https://bit.ly/3ubuq5o" class="imgo1 active" alt="Image">
+                    </div>
+                    <input required class="file" name="file2" id="file2" type="file">
+                </div>
+                <div class="imgo">
+                    <button class="btn browse">Browse Image</button>
+                    <div class="contant">
+                        <img src="https://bit.ly/3ubuq5o" class="imgo1 active" alt="Image">
+                    </div>
+                    <input required class="file" name="file3" id="file3" type="file">
+                </div>
+                <div class="imgo">
+                    <button class="btn browse">Browse Image</button>
+                    <div class="contant">
+                        <img src="https://bit.ly/3ubuq5o" class="imgo1 active" alt="Image">
+                    </div>
+                    <input required class="file" name="file4" id="file4" type="file">
+                </div>
+                <div class="imgo">
+                    <button class="btn browse">Browse Image</button>
+                    <div class="contant">
+                        <img src="https://bit.ly/3ubuq5o" class="imgo1 active" alt="Image">
+                    </div>
+                    <input required class="file" name="file5" id="file5" type="file">
+                </div>
+            </div>
+            <h3 class="help">If you use drag & drop method so I am inform you. You need to click on <b>Browse Image</b><i class="fas fa-hand-point-up"></i> for Enter Image .</h3>
+            <h3 class="help">Duble Click On Image When You Want To Change Image</h3>
+        </div>
+        <div class="product-decp">
+            <h1 class="product-name"><input class="input" type="text" name="product_name" id="product_name" placeholder="Enter Your Product Name Here" required></h1>
+            <p class="price">
+                <span class="real" id="real"><input class="input" type="text" name="real_price" id="real_price" placeholder="Enter Real Price Of Your Product" required></span>
+                <br>
+                <span class="discount" id="discount"><input class="input" type="text" name="discount_price" id="discount_price" placeholder="Discount Price Enter It's Optional"></span>
+            </p>
+            
+            <div class="tabs">
+                <div class="tabs_body">
+                    <div id="details" class="tbody">
+                        <div class="a active1">Details</div>
+
+                        <div class="info">
+                            <div class="item1">
+                                <p><textarea name="small_description" id="small_description" cols="50" rows="10" maxlength="250" required placeholder="Give A Small Description Under 250 Words."></textarea></p>
+                            </div>
+                            <div class="item2">
+                                <h2 class="head">Quantity</h2>
+                                <input class="input" type="number" name="quantity" id="quantity" min="1" max="10" value="1" required>
+                            </div>
+                            <div class="item3">
+                                <h2 class="head">Size</h2>
+                                <input class="input" type="text" name="size" id="size" required>
+                            </div>
+                            <div class="item3">
+                                <h2 class="head">Color</h2>
+                                <input class="input" type="text" name="color" id="color" required>
+                            </div>
+                            <div class="item3">
+                                 <h2 class="head">Cateogry</h2>
+                                <select name="Cateogry" id="Cateogry">
+                                    <option value="Accessories"  selected>Accessories</option>
+                                    <option value="Appliances">Appliances</option>
+                                    <option value="Cloths">Cloths</option>
+                                    <option value="Cosmetic">Cosmetic</option>
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Fashions">Fashions</option>
+                                    <option value="Fitness">Fitness</option>
+                                    <option value="Grocery">Grocery</option>
+                                    <option value="HomeDecoretion">HomeDecoretion</option>
+                                    <option value="OfficeFuniture">OfficeFuniture</option>
+                                    <option value="Sport">Sport</option>
+                                    <option value="Toys">Toys</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="features" class="tbody">
+                        <div class="a">Features</div>
+                        <div class="info">
+                            <textarea name="long_description" id="long_description" cols="50" rows="10" required placeholder="Describe Your Product Features Here."></textarea>
+                        </div>
+                    </div>
+                    <div id="seller" class="tbody">
+                        <div class="a">Seller Details</div>
+                        <div class="info">
+                            <table>
+                                <tr>
+                                    <th>Name -> </th>
+                                    <td>
+                                        {% for f in fm %}
+                                            {{f}}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Shop Name -> </th>
+                                    <td><input class="input" type="text" name="shop_address" id="shop_address" required placeholder="Enter Your Shop Name With Address." value="{{request.user.sellerdetails.ShopAddress}}"></td>
+                                </tr>
+                                <tr>
+                                    <th>Contact -> </th>
+                                    <td>
+                                        Email - <input class="input" type="email" name="email" id="email" placeholder="Enter Your Email Id." value="{{request.user.sellerdetails.Email}}" required>
+                                        <br>
+                                        Mobile - <input class="input" type="tel" name="phone" id="phone" pattern="+[0-9]{1-2}[0-9]{10-12}" value="{{request.user.sellerdetails.Mobile_Number}}" placeholder="Enter Mobile Number (eg. +910123456789)" required>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="addcart">
+                <input class="input" class="btnadd" type="reset" value="RESET">
+                <input class="input" class="btnadd" type="submit" value="ADD">
+            </div>
+        </div>
+    </form>
+  </section>
+{% endblock body %}
+
+{% block js %}
+{% load static %}
+  <script src="{% static 'seller/JS/sellproduct.js' %}"></script>
+  <script>
+    let options = document.querySelectorAll('#id_Seller option');
+    options.forEach((value,index)=>{
+
+      if (options[index].innerHTML == "{{request.user.sellerdetails.Seller}}"){
+        return;
+      } else {
+        options[index].style.display = 'none';
+      }
+    });
+
+  </script>
+{% endblock js %}
+

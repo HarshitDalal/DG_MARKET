@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;700&family=Lobster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --font-BalooBhai2: 'Baloo Bhai 2', cursive;
+    --font-Lobster: 'Lobster', cursive;
+}
+$font1: var(--font-BalooBhai2);
+$font2: var(--font-Lobster);
+
+body{
+    overflow-x: hidden;
+}
+
+
+.product-gallery{
+    overflow-x: hidden;
+    min-width: 100%;
+    padding: 0 2.5rem;
+    margin: 1rem 0;
+    // background-color: rgb(161, 156, 156);
+    .maingallery{
+        width: 100%;
+    }
+    .gallery{
+        min-width: 100%;
+        display: flex;
+        margin: 1rem 0;
+        flex-direction: column;
+        border-radius: 1rem;
+        .heading{
+            min-width: 100%;
+            font-size: 1.6rem;
+            padding: .2rem;
+            background: gray;
+            border-radius: 1.5rem;
+            margin-top: .5rem;
+            h1{
+                color: whitesmoke;
+                font-family: $font1;
+                margin: 0 4rem;
+            }
+        }
+        .product-slider{
+            min-width: 100%;
+            margin: 1.5rem 0;
+            display: flex;
+            padding: 1.2rem .2rem;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            object-fit: cover;
+            .slider{
+                display: flex;
+                min-width: 100%;
+                height: 90%;
+                flex-wrap: nowrap;
+            }
+            .product-box{
+                border-radius: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;    
+                overflow: hidden;
+                padding: .1rem;
+                background: #ebe4e4;
+                box-shadow: 0 0 .7rem .3rem rgb(228, 169, 223);
+                .image{
+                    border-top-left-radius: 2rem;
+                    border-top-right-radius: 2rem;
+                    object-fit: cover;
+                    min-width: 100%;
+                    // background: rgb(100, 97, 97);
+                    img{
+                        width: 100%;
+                        height: 19.6rem;
+                    }
+                }
+                .small-decp{
+                    display: flex;
+                    min-width: 100%;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    min-height: 5rem;
+                    overflow: hidden;
+                    padding: 1.2rem 0.1rem;
+                    text-align: center;
+                    line-height: 1.2;
+                    font-family: $font1;
+                    color: rgb(87, 29, 29);
+                    background: rgb(216, 200, 211);
+                    h4{
+                        min-width: 70%;
+                        font-size: 1.25rem;
+                    }
+                    .realprice,.discountprice{
+                        min-width: 25%;
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                        color: rgb(223, 93, 93);
+                    }
+                    .discountprice{
+                        color: rgb(0, 158, 0);
+                    }
+                }
+                .bton{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-evenly;
+                    opacity: 1;
+                    text-align: center;
+                    .btn,.add{
+                        text-decoration: none;
+                        color: white;
+                        width: 46%;
+                        background: rgb(0, 0, 218);
+                        padding: .9rem .5rem; 
+                        border-radius: 1rem;
+                        margin: .7rem 0;
+                        font-size: 1.2rem;
+                        font-family: $font1;
+                        font-weight: 500;
+                        z-index: 10;
+                        border: none;
+                        cursor: pointer;
+                    }                    
+                }
+            }
+        }
+    }    
+}
+.noShow{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+@media screen and(max-width:768px) {
+    html{
+        font-size: 59%;
+    }
+}

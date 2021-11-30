@@ -1,0 +1,70 @@
+{% extends "index.html" %}
+
+<!-- Add Title Here -->
+{% block title %}Product{% endblock title %}
+
+<!-- Add CSS Here -->
+{% block css %}
+  {% load static %}
+  <link rel="stylesheet" href=" {% static 'shop/MINCSS/product.min.css' %} ">
+{% endblock css %}
+
+<!-- Add Body Here -->
+{% block body %}
+{% load static %}
+  <section class="product-gallery" id="product-gallery">
+        <div class="maingallery bg" id="maingallery">        
+            {% for i,range in products %}
+                <div class="gallery bg">
+                    <div class="heading">
+                        <h1 id="{{i.0.Cateogry}}">{{i.0.Cateogry}} Type Product :</h1>
+                    </div>
+                    <div class="product-slider swiper-container">
+                        <div class="slider swiper-wrapper">
+                            <div class="product-box swiper-slide">
+                                <div class="image">
+                                    <img class="img noShow show" id="imgpr{{i.0.id}}" src="/media/{{i.0.Main_Image}}">
+                                </div>
+                                <div class="small-decp">
+                                    <h4 class="name" id="namepr{{i.0.id}}">{{i.0.Product_Name}}</h4>
+                                    <p class="realprice">&#x20B9; {{i.0.Price}}</p>
+                                    <p class="discountprice">&#x20B9; {{i.0.Discount}}</p>
+                                </div>
+                                <div class="bton">
+                                    {% comment %} <button  class="add" id="pr{{i.0.id}}">Add Cart</button> {% endcomment %}
+                                    <a href="/product/productdetail/{{i.0.id}}" id="qr{{i.0.id}}" class="btn">Quick View</a>
+                                </div>
+                            </div>
+                            {% for j in i|slice:"1:" %}
+                                <div class="product-box swiper-slide">
+                                    <div class="image">
+                                        <img class="img noShow show" id="imgpr{{j.id}}" src="/media/{{j.Main_Image}}">
+                                    </div>
+                                    <div class="small-decp">
+                                        <h4 class="name" id="namepr{{j.id}}">{{j.Product_Name}}</h4>
+                                        <p class="realprice">&#x20B9; {{j.Price}}</p>
+                                        <p class="discountprice">&#x20B9; {{j.Discount}}</p>
+                                    </div>
+                                    <div class="bton">
+                                        {% comment %} <button  class="add" id="pr{{j.id}}">Add Cart</button> {% endcomment %}
+                                        <a href="/product/productdetail/{{j.id}}" id="qr{{j.id}}" class="btn">Quick View</a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <!-- add arrow -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div> 
+            {% endfor %}
+        </div>      
+    </section>
+
+{% endblock body %}
+
+<!-- Add JS Here -->
+{% block js %}
+  {% load static %}
+  <script src="{% static 'shop/JS/product.js' %}"></script>
+{% endblock js %}

@@ -1,0 +1,69 @@
+{% extends "index.html" %}
+
+{% block title %}
+  Seller
+{% endblock title %}
+
+{% block css %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'seller/CSS/base.css' %}">
+{% endblock css %}
+
+
+{% block body %}
+
+  <div class="progilecontainer">
+    <div class="profilecontant bg">
+        <div class="userimg">
+            <div class="img bg">
+            {% if not request.user.sellerdetails.Profile_Pic%}
+                <img class="bg" style="padding: 0;" src="" alt="Upload Your Image or Load Your Image">
+            {% else %}
+                <img class="bg" style="padding: 0;" src="{{request.user.sellerdetails.Profile_Pic.url}}" alt="Upload Your Image or Load Your Image">
+            {% endif %}
+            </div>
+            <div class="backbuttons bg">
+                <a href="{% url 'home' %}" class="btn">Back To Home</a>
+            </div>
+        </div>
+        <div class="userform bg">
+            <form action="" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              {% for fm in sfm %}
+                <div class="userentries">
+                    <label for="">
+                        <span class="placeholder">{{fm.label_tag}}</span>
+                        {{fm}}
+                    </label>
+                </div>
+              {% endfor %}
+              <div class="userentries">
+                  <label for="">
+                      <input type="submit" value="Save">
+                  </label>
+              </div>
+            </form>
+        </div>
+    </div>
+    {% if request.user.sellerdetails.Seller %}
+        <div class="selleropen bg">
+          <a href="{% url 'sellproduct' %}">Sell Product</a>
+        </div>
+      {% endif %}
+  </div>
+{% endblock body %}
+
+{% block js %}
+  <script>
+    let options = document.querySelectorAll('#id_Seller option');
+    options.forEach((value,index)=>{
+      if (options[index].innerHTML == "{{request.user}}"){
+        return;
+      } else {
+        options[index].style.display = 'none';
+      }
+    });
+
+  </script>
+{% endblock js %}
+

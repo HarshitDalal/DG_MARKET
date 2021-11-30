@@ -1,0 +1,137 @@
+{% extends "index.html" %}
+
+<!-- Add Title Here -->
+{% block title %}Home{% endblock title %}
+
+<!-- Add CSS Here -->
+ {% block css %}
+  {% load static %}
+  <link rel="stylesheet" href=" {% static 'shop/CSS/home1.css' %} ">
+{% endblock css %}
+
+<!-- Add Body Here -->
+{% block body %}
+  {% load static %}
+  <section class="homecontainer">
+        <div class="swiper-container">
+            {% comment %} <!-- Additional required wrapper --> {% endcomment %}
+            <div class="swiper-wrapper">
+                {% comment %} <!-- Slides --> {% endcomment %}
+                <div class="swiper-slide">
+                    <div class="title">
+                        <h2>Welcome To DG MARKET.</h2>
+                        <p>Sell And Purchase Any Type Of Item According To Your Needs. </p>
+                    </div>
+                    <div class="img">
+                        <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/product.jpg?raw=true">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        <h2>Purchase Your Products <br> From Local Seller.</h2>
+                        <p>Our goal is give a boost to local seller who effect in this pandamic.</p>
+                        <a href="{% url 'product' %}" class="btn">Buy Products</a>
+                    </div>
+                    <div class="img">
+                        <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/e-commerce-4516044.jpg?raw=true">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        <h2>You Can Also Sell Your Products <br> On DG MARKET.</h2>
+                        <p>You need to create first Seller account on our platform.</p>
+                        <a href="{% url 'sellerhome' %}" class="btn">Sell Products</a>
+                    </div>
+                    <div class="img">
+                        <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/ecommerce-2140603.jpg?raw=true">
+                    </div>
+                </div>
+            </div>
+            {% comment %} <!-- If we need pagination --> {% endcomment %}
+            <div class="swiper-pagination"></div>
+        </div>
+        {% comment %} <!-- ---- Categories ---- --> {% endcomment %}
+        <div class="categories bg">
+            <h1>Categories</h1>
+            <div class="row">
+                <div class="col-3" onclick="location.href='/product/#Cloths';">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/cloth.png?raw=true">
+                    <h3>Cloths</h3>
+                </div>
+                <div class="col-3" onclick="location.href='/product/#Electronics';">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/electronic.png?raw=true">
+                    <h3>Electronics</h3>
+                </div>
+                <div class="col-3" onclick="location.href='/product/#Grocery';">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/grocery.png?raw=true">
+                    <h3>Grocery</h3>
+                </div>
+                <div class="col-3" onclick="location.href='/product/#Fashions';">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/fasation.png?raw=true">
+                    <h3>Fashionable</h3>
+                </div>
+                <div class="col-3" onclick="location.href='/product/#Cosmetic';">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/beauty.png?raw=true">
+                    <h3>Cosmetic</h3>
+                </div>
+                <div class="col-3" onclick="location.href='/product/#Toys';">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/toys.png?raw=true">
+                    <h3>Toys</h3>
+                </div>
+                <div class="col-3" onclick="location.href='/product/#Accessories';">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/accessories.png?raw=true">
+                    <h3>Accessories</h3>
+                </div>
+                <div class="col-3" onclick="location.href='/product/#Appliances';">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/appliance.png?raw=true">
+                    <h3>Appliances</h3>
+                </div>
+                <div class="col-3" onclick="location.href='/product/#Sports';">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/sports.png?raw=true">
+                    <h3>Sports</h3>
+                </div>
+                <div class="col-3" onclick="location.href='/product/#HomeDecoretion';">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/homedecoretion.png?raw=true">
+                    <h3>HomeDecoretion</h3>
+                </div>
+                <div class="col-3" onclick="location.href='/product/#Fitness';">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/fitness.png?raw=true">
+                    <h3>Fitness</h3>
+                </div>
+                <div class="col-3" onclick="location.href='/product/#OfficeFuniture';">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/cateogries/office.png?raw=true">
+                    <h3>OfficeFuniture</h3>
+                </div>
+
+            </div>
+        </div>
+        {% comment %} <!-- ---- Some Product ---- --> {% endcomment %}
+        <div class="somepoducts bg">
+            <h1> Top New Products</h1>
+            <div class="row">
+                {% for i in newproducts %}
+                    <div class="product-box">
+                        <div class="image">
+                            <img class="img" id="imgpr{{i.id}}" src="/media/{{i.Main_Image}}">
+                        </div>
+                        <div class="small-decp">
+                            <h4 class="name" id="namepr{{i.id}}">{{i.Product_Name}}</h4>
+                            <p class="realprice">&#x20B9; {{i.Price}}</p>
+                            <p class="discountprice">&#x20B9; {{i.Discount}}</p>
+                        </div>
+                        <div class="bton">
+                            {% comment %} <button  class="add" id="pr{{i.id}}">Add Cart</button> {% endcomment %}
+                            <a href="/product/productdetail/{{i.id}}" id="qr{{i.0.id}}" class="btn">Quick View</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock body %}
+
+<!-- Add JS Here -->
+{% block js %}
+{% load static %}
+  <script src="{% static 'shop/JS/home.js' %}"></script>
+{% endblock js %}

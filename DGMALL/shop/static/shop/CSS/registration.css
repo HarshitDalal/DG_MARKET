@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap");
+:root {
+  --font: 'Baloo Bhai 2', cursive;
+  --color1: #1b9ada;
+  --color2: #7ec0df;
+  --color3: #f33074;
+  --white: #fff;
+  --black: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.register {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2.5rem;
+  margin: 1rem 0;
+}
+
+.register .contantbx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.register .contantbx .formbx {
+  margin: 2rem 0;
+  z-index: 2;
+  background: #34355496;
+  padding: 3rem;
+  width: 50%;
+  border-radius: 2rem;
+}
+
+.register .contantbx .formbx h2 {
+  color: var(--color1);
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border-bottom: 0.4rem solid var(--color3);
+  letter-spacing: .15rem;
+  display: inline-block;
+}
+
+.register .contantbx .formbx .inputbx {
+  margin-bottom: 1rem;
+}
+
+.register .contantbx .formbx .inputbx .placeholder {
+  font-size: 1.6rem;
+  margin-bottom: .5rem;
+  display: inline-block;
+  color: var(--color2);
+  font-weight: 300;
+  letter-spacing: .06rem;
+}
+
+.register .contantbx .formbx .inputbx label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register .contantbx .formbx .inputbx input {
+  width: 100%;
+  padding: .6rem 1rem;
+  outline: none;
+  font-weight: 400;
+  font-size: 1.6rem;
+  border: 0.1rem solid var(--color2);
+  letter-spacing: .07rem;
+  color: var(--white);
+  background: rgba(51, 51, 51, 0.26);
+  border-radius: 3rem;
+}
+
+.register .contantbx .formbx .inputbx input[type="submit"] {
+  background: var(--color3);
+  color: var(--white);
+  width: 100%;
+  padding: .7rem 1rem;
+  cursor: pointer;
+  letter-spacing: .1rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+}
+
+.register .contantbx .formbx .inputbx p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color2);
+}
+
+.register .contantbx .formbx .inputbx p a {
+  text-decoration: none;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  color: var(--color3);
+}
+
+.register .contantbx .formbx .inputbx p a:hover {
+  text-decoration: underline;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.register .contantbx .formbx .inputbx .center {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.register .contantbx .formbx .inputbx .center a {
+  color: #14eb26;
+}
+
+.register .contantbx .formbx h3 {
+  color: var(--color1);
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin: 2rem 0 1rem;
+  text-align: center;
+}
+
+.register .contantbx .formbx .sci {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register .contantbx .formbx .sci li {
+  list-style: none;
+}
+
+.register .contantbx .formbx .sci li a {
+  width: 5rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--color3);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.7rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .register {
+    height: 100%;
+  }
+  .register .contantbx {
+    width: 100%;
+  }
+  .register .contantbx .formbx {
+    width: 90%;
+  }
+}

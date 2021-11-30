@@ -1,0 +1,109 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    Product Details
+{% endblock title %}
+
+{% block css %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'shop/CSS/productdetail.css' %}">
+{% endblock css %}
+
+{% block body %}
+
+
+    <section class="product-gallery" id="product-gallery">
+        
+        <!-- popup model      -->
+        <div class="product-detail-container bg">
+            <div class="product-image">
+                <div class="main-image">
+                    <img id="main" src="/media/{{product.Main_Image}}" alt="">                    
+                </div>
+                <div class="other-image">
+                    <img class="imgo active" id="imgpr{{product.id}}" src="/media/{{product.Main_Image}}" alt="">
+                    <img class="imgo" src="/media/{{product.image_2}}" alt="">
+                    <img class="imgo" src="/media/{{product.image_3}}" alt="">
+                    <img class="imgo" src="/media/{{product.image_4}}" alt="">
+                    <img class="imgo" src="/media/{{product.image_5}}" alt="">
+                </div>
+            </div>
+            <div class="product-decp">
+                <h1 class="product-name" id="namepr{{product.id}}">{{product.Product_Name}}</h1>
+                <p class="price">
+                    <span class="real" id="real">&#x20B9; {{product.Price}}</span><br>
+                    <span class="discount" id="discount">&#x20B9; {{product.Discount}}</span>
+                </p>
+                <div class="tabs">
+                    <div class="tab_header">
+                        <div class="a active1" >Details</div>
+                        <div class="a" >Features</div>
+                        <div class="a" >Seller</div>
+                    </div>
+                    <div class="indicator"></div>
+                    <div class="tabs_body">
+                        <div id="details" class="tbody active2">
+                            <div class="info">
+                                <div class="item1">
+                                    <pre>{{product.Small_Decription}}</pre>
+                                </div>
+                                <div class="item2">
+                                    <details class="head">
+                                        <summary class="head" style="font-size: 1.6rem;font-weight: 700;">Quantity</summary>
+                                        <p class="head">Quantity Provided By Seller Is {{product.Quantity}}</p>
+                                    </details>
+                                    <input type="number" name="quantity" id="quantity" min="1" minlength="1" maxlength="2" max="{{product.Quantity}}" value="1">
+                                </div>
+                                <div class="item3">
+                                    <h2 class="head">Size</h2>
+                                    <h3 style="color: #00acee;">{{product.Size}}</h3>
+                                </div>
+                                <div class="item2">
+                                    <h2 class="head">Select Size</h2>
+                                    <input type="text" style="color: #00acee;" id="sizepr{{product.id}}" value="{{product.Size}}">
+                                </div>
+                                <div class="item">
+                                    <h2 class="head">Color</h2>
+                                    <h3 style="color: #00acee;" id="clrpr{{product.id}}">{{product.Color}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="features" class="tbody">
+                            <div class="info">
+                                <div class="item1">
+                                    <pre>{{product.Details}}</pre>
+                                </div>
+                            </div>  
+                        </div>
+                        <div id="seller" class="tbody">
+                            <div class="info">
+                                <table>
+                                    <tr>
+                                        <th>Name -> </th>
+                                        <td style="color: #00acee; font-size:1.5rem; line-height:2.4" id="selpr{{product.id}}">{{product.Seller}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Shop Name -> </th>
+                                        <td style="color: #00acee; font-size:1.5rem; line-height:2.4">{{product.Seller_Address}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Contact -> </th>
+                                        <td style="color: #00acee; font-size:1.5rem; line-height:2.4">Email - <span id="selemailpr{{product.id}}">{{product.Seller_Email}}</span><br>Mobile - <span id="selphonepr{{product.id}}">{{product.Seller_Mobile}}</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="addcart">
+                    <button class="btnadd add" id="pr{{product.id}}">ADD TO CART</button>
+                </div>
+            </div>
+        </div>       
+    </section>
+{% endblock body %}
+
+{% block js %}
+{% load static %}
+    <script src="{% static 'shop/JS/productdetail.js' %}"></script>
+{% endblock js %}

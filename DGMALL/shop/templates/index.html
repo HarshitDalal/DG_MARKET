@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}{% endblock title %}|DG MARKET </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/HarshitDalal/imagesHarshit/master/icon/f.ico?raw=true" type="image/x-icon">
+    {% block css %}
+    {% endblock css %}
+    <link rel="stylesheet" href="{% static 'shop/MINCSS/index.min.css' %}">
+
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/logo/logo.png?raw=true" alt="DG MARKET">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'product' %}">Products</a></li>
+                    <li><a href="{% url 'sellerhome' %}">Seller</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'order' %}">Order</a></li>
+                    <li><a href="{% url 'profile' %}"><i class="fas fa-user"></i></a></li>
+                </ul>
+            </nav>
+            <a href="{% url 'bucket' %}" class="cart_area">
+                <i class="fas fa-cart-plus"></i>(<span id="cart">0</span>)
+            </a>
+            <i class="fas fa-bars manu-icon"></i>
+            <i class="fas fa-times close-icon"></i>
+        </div>
+    </header>
+
+    <section class="indexsection">
+        <div class="messages bg" style="padding:0;">
+            {% if messages %}
+            {% for message in messages %}
+                <div class="note {{message.tags}} width">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+                    <p>{{message}}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </section>
+
+    {% block body %}
+      
+    {% endblock body %}
+
+    <footer class="footer" id="footer">
+        <div class="footercontainer bg">
+            <div class="row">
+                <div class="footer-col-1 wm">
+                    <img src="https://github.com/HarshitDalal/imagesHarshit/blob/master/logo/logo2.png?raw=true">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, quis. Ab libero aspernatur, repellendus sapiente tenetur doloremque fuga cumque dolore.</p>
+                </div>
+                <div class="footer-col-2 wm">
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="footer-col-3 wm">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'blog' %}">Blogs</a></li>
+                        <li><a href="{% url 'product' %}">Products</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4 wm">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a> Twitter</li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a> Instagram</li>
+                        <li><a href="#"><i class="fab fa-github"></i></a> GitHub</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright &copy; 2021 - DG MARKET</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{% static 'shop/JS/index.js' %}"></script>
+    <script>
+     //Add to cart js
+     if (localStorage.getItem('cart') == null) {
+         var cart = {};
+        } else {
+            cart = JSON.parse(localStorage.getItem('cart'));
+            var totle = 0
+            for(var item in cart) {
+              totle = totle + cart[item][0];
+            }
+            document.getElementById('cart').innerHTML = totle;
+        }
+
+        $('.add').click(function () {
+            var idstr = this.id.toString();
+            var sum = 0;
+            console.log(idstr);
+            if (cart[idstr] != undefined){
+                if (document.getElementById('quantity').getAttribute('max') == cart[idstr][0]) {
+                    alert('You Select Maximum Quantity Of This Product.');
+                } else {
+                    qty = cart[idstr][0]++;
+                    cart[idstr][6] = (cart[idstr][3]*cart[idstr][0]);                    
+                }
+            } else {
+                qty = 1;
+                psize = document.getElementById('size'+idstr).value;
+                pname = document.getElementById('name'+idstr).innerHTML;
+                pimg = document.getElementById('img'+idstr).src;
+                pcolor = document.getElementById('clr'+idstr).innerHTML;
+                pseller = document.getElementById('sel'+idstr).innerHTML;
+                psellem = document.getElementById('selemail'+idstr).innerHTML;
+                psellph = document.getElementById('selphone'+idstr).innerHTML;
+                if (document.getElementById('discount').innerText.length > 2) {
+                    pprice = document.getElementById('discount').innerHTML.substring(2);
+                    if (isNaN(Number(pprice))){
+                        pprice = pprice.replace(',','');
+                        pprice = parseFloat(pprice);
+                    } else {
+                        pprice = parseFloat(pprice);
+                    }
+                    psubtotal = pprice;
+                } else {
+                    pprice = document.getElementById('real').innerHTML.substring(2);
+                    if (isNaN(Number(pprice))){
+                        pprice = pprice.replace(',','');
+                        pprice = parseFloat(pprice);
+                    } else {
+                        pprice = parseFloat(pprice);
+                    }
+                    psubtotal = pprice;
+                }
+                console.log(psubtotal)
+                cart[idstr] = [qty,pname,pimg,pprice,psize,pcolor,psubtotal,pseller,psellem,psellph];
+            }
+            for(var item in cart) {
+              sum = sum + cart[item][0];
+            }
+            console.log(cart)
+            localStorage.setItem('cart',JSON.stringify(cart));
+            document.getElementById('cart').innerHTML = sum;
+        });
+    </script>
+
+
+    {% block js %}{% endblock js %}
+</body>
+</html>

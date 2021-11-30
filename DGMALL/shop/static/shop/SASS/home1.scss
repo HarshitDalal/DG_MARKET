@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Bhai 2',sans-serif,cursive;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    background: rgba(125,125,125,.3);
+}
+
+// homecontainer scss
+.homecontainer{
+    width: 100%;
+    height: 100%;
+    margin: 1.4rem 0;
+    padding: 0 2.6rem;
+    .swiper-container{
+        box-shadow: 0 0.5rem 1.2rem .7rem rgba(0,0,0,.2);
+        width: 100%;
+        height: 40rem;
+        z-index: 0;
+        margin-top: .5rem;
+        margin-bottom: .9rem;
+        background: rgb(193, 227, 233);
+        .swiper-wrapper{
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                /* Center slide text vertically */
+                display: flex;
+                justify-content: center;
+                background: rgb(182, 237, 245);
+                align-items: center;
+                .title{
+                    width: 50%;
+                    flex-basis: 50%;
+                    padding-left: 2.5rem;
+                    pointer-events: none;
+                    h2{
+                        text-align: left;
+                        color: rgb(141, 139, 138);
+                    }
+                    p{
+                        color: rgb(141, 139, 138);
+                        text-align: left;
+                    }
+                    .btn{
+                        color: rgb(255, 255, 255);
+                        padding: .7rem 1rem;
+                        margin-top: .6rem;
+                        font-size: 1.4rem;
+                        background: rgb(44, 40, 40);
+                        text-decoration: none;
+                        float: left;
+                        border-radius: .4rem;
+                        cursor: pointer;
+                        pointer-events: all;
+                    }
+                }
+                .img{
+                    flex-basis: 50%;
+                    width: 50%;
+                    padding-right: 4rem;
+                    
+                    img{
+                        box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.2);
+                        width: 100%;
+                        height: 30rem;
+                        border-radius: 1.3rem;
+                    }
+                }
+              }
+        }
+    }
+    
+    .categories{
+        text-align: center;
+        h1{
+            display: inline-block;
+            color: rgb(141, 139, 138);
+            font-size: 3rem;
+            font-weight: 700;
+            margin: .7rem;
+            line-height: 1.3;
+            border-bottom: .4rem solid white;
+        }
+        .row{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            .col-3{
+                width: calc(100% / 3);
+                text-align: center;
+                margin: 1rem 0;
+                flex-basis: calc(100% / 3);
+                img{
+                    width: 90%;
+                    height: 20rem;
+                    padding: 1rem;
+                    margin:  0 1rem;
+                    border-radius: 1rem;
+                    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.2);
+                }
+                h3{
+                    display: inline-block;
+                    color: rgb(141, 139, 138);
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    margin: .7rem;
+                }
+            }
+            .col-3:hover h3{
+                color: rgb(177, 35, 212);
+                pointer-events: none;
+            }
+            .col-3:hover img{
+                background: rgb(171, 212, 211);
+            }
+        }
+    }
+    .somepoducts{
+        margin: 1rem 0;
+        text-align: center;
+        h1{
+            display: inline-block;
+            color: rgb(141, 139, 138);
+            font-size: 3rem;
+            font-weight: 700;
+            margin: .7rem;
+            line-height: 1.3;
+            border-bottom: .4rem solid white;
+        }
+        .row{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            .product-box{
+                width: calc(100% / 4.5);
+                border-radius: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;    
+                overflow: hidden;
+                padding: .8rem;
+                margin: 1rem 0;
+                // background: rgba(0, 0, 0, 0.2);
+                box-shadow: 0 0 .7rem .3rem rgba(0, 0, 0, 0.2);
+                .image{
+                    object-fit: cover;
+                    min-width: 100%;
+                    img{
+                        border-radius: 1rem;
+                        width: 100%;
+                        height: 27rem;
+                    }
+                }
+                .small-decp{
+                    display: flex;
+                    min-width: 100%;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    min-height: 5rem;
+                    padding: 1.2rem 0.1rem;
+                    overflow: hidden;
+                    text-align: center;
+                    line-height: 1.2;
+                    color: rgb(87, 29, 29);
+                    background: rgba(230, 115, 115, 0.3);
+                    border-radius: 1rem;
+                    h4{
+                        min-width: 70%;
+                        font-size: 1.25rem;
+                    }
+                    .realprice,.discountprice{
+                        min-width: 25%;
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                        color: rgb(212, 25, 25);
+                    }
+                    .discountprice{
+                        color: rgb(0, 158, 0);
+                    }
+                }
+                .bton{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-evenly;
+                    opacity: 1;
+                    text-align: center;
+                    .btn,.add{
+                        text-decoration: none;
+                        color: white;
+                        width: 40%;
+                        background: rgb(0, 0, 218);
+                        padding: .9rem;
+                        border-radius: 1rem;
+                        margin: 1rem 0;
+                        font-size: 1.2rem;
+                        font-family: 'Baloo Bhai 2', sans-serif,cursive;
+                        font-weight: 500;
+                        z-index: 10;
+                        border: none;
+                        cursor: pointer;
+                    }                    
+                }
+            }
+            .product-box:hover{
+                background: rgb(183, 221, 219);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    // home
+    .homecontainer{
+
+        .categories{
+            .row{ 
+                .col-3{ 
+                    img{
+                        height: 15rem;
+                    }
+                }
+            }
+        }
+        .swiper-container{
+            .swiper-wrapper{
+                height: calc(100% + 5rem);
+                .swiper-slide{
+                    flex-direction: column;
+                    width: 100%;
+                    height: 100%;
+                    padding: 1rem;
+                    .title{
+                        width: 100%;
+                        padding: 3rem 1rem;
+                    }
+                    .img{
+                        width: 100%;
+                        padding: 0rem 2rem;
+                        padding-bottom: 1rem;
+                        img{
+                            width: 100%;
+                            height: 15rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .somepoducts{
+            .row{
+                .product-box{
+                    width: calc(100% / 2);
+                    height: 32rem;
+                    .image{
+                        .img{
+                            height: 18rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

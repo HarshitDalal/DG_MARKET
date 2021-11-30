@@ -1,0 +1,89 @@
+{% extends "index.html" %}
+
+<!-- Add Title Here -->
+{% block title %}About{% endblock title %}
+
+<!-- Add CSS Here -->
+{% block css %}
+  {% load static %}
+  <link rel="stylesheet" href=" {% static 'shop/CSS/about.css' %} ">
+  <!-- <link rel="stylesheet" href="{% static 'shop/MINCSS/about.min.css' %}"> -->
+  <style type="text/css">
+      .about .container .profile-cart .dp img {
+            border-radius: 50%;
+            width: 19rem;
+            height: 19rem;
+        }
+  </style>
+{% endblock css %}
+
+<!-- Add Body Here -->
+{% block body %}
+{% load static %}
+  <section class="about">
+    <div class="container bg">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide profile-cart">
+                <div class="dp">
+                    <img src="{% static 'shop/IMAGES/hars.jpg' %}" alt="">
+                </div>
+                <div class="name">
+                    <h2>Harshit Dalal</h2>
+                </div>
+                <div class="skills">
+                    <div class="line"></div>
+                    <p class="font-p">Project Manager</p>
+                </div>
+                <div class="info-social">
+                    <p class="info-p">You Also Follow Me On My Social Handels</p>
+                </div>
+                <div class="social">
+                    <a class="hendal" target="_blank" href="https://www.facebook.com/harshit.dalal.967/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="hendal" target="_blank" href="https://twitter.com/HarshitDalal14"><i class="fab fa-twitter"></i></a>
+                    <a class="hendal" target="_blank" href="https://www.linkedin.com/in/harshit-dalal-5646951b6/"><i class="fab fa-linkedin-in"></i></a>
+                    <a  class="hendal" target="_blank" href="https://github.com/HarshitDalal/"><i class="fab fa-github"></i></a>                
+                </div>
+            </div>
+            <div class="swiper-slide profile-cart">
+                <div class="dp">
+                    <img src="{% static 'shop/IMAGES/ayush.jpeg' %}" alt="">
+                </div>
+                <div class="name">
+                    <h2>Ayush Kale</h2>
+                </div>
+                <div class="skills">
+                    <div class="line"></div>
+                    <p class="font-p">Database Manager</p>
+                </div>
+                <div class="info-social">
+                    <p class="info-p">You Also Follow Me On My Social Handels</p>
+                </div>
+                <div class="social">
+                    <a class="hendal" target="_blank" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="hendal" target="_blank" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="hendal" target="_blank" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a  class="hendal" target="_blank" href=""><i class="fab fa-github"></i></a>                
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="about-us">
+            <h1 class="wave">HI <span class="hi">!</span></h1>
+            <h2 class="do">Here's who I am & what I do ?</h2>
+            <a class="btn" href="https://drive.google.com/file/d/17CiV_KwJcwNUiMmQoFctEMvVCuGZqSrI/view?usp=sharing" target="_blank" rel="noopener noreferrer">Harshit</a>
+            <a class="btn" href="" target="_blank" rel="noopener noreferrer">Ayush</a>
+            <a class="btn" href="{% url 'contact' %}">Contact</a>
+            <p class="pera">Lorem, ipsum dolor Lorem ipsum dolor sit amet. sit amet consectetur adipisicing elit. Beatae eaque eligendi quia ad dolorum labore necessitatibus voluptate consequuntur ipsam, vel esse atque sed corrupti enim.</p>
+            <p class="pera">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, at porro consequatur animi perspiciatis tempora.</p>
+        </div>
+    </div>
+  </section>
+{% endblock body %}
+
+<!-- Add JS Here -->
+{% block js %}
+  {% load static %}
+  <script src="{% static 'shop/JS/about.js' %}"></script>
+{% endblock js %}

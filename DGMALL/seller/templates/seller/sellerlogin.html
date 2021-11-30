@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    Seller Login
+{% endblock title %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'seller/CSS/sellerlogin.css' %}">
+{% endblock css %}
+
+{% block body %}
+    <section class="sellerlogin">
+        <div class="contantbx bg">
+            <div class="formbx">
+                <h2>Seller Login</h2>
+                <form action="" method="post">
+                {% csrf_token %}
+                    {% for fm in sellerfm %}
+                        <div class="inputbx">
+                            <span class="placeholder">{{fm.label_tag}}</span>
+                            <label for="">
+                                {{fm}}
+                            </label>
+                        </div>
+                    {% endfor %}   
+                    <div class="inputbx">
+                        <input type="submit" value="Submit">
+                    </div>         
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+{% endblock body %}
+
+{% block js %}
+    <script>
+    let options = document.querySelectorAll('#id_Seller_Name option');
+    options.forEach((value,index)=>{
+
+      if (options[index].innerHTML == "{{request.user}}"){
+        return;
+      } else {
+        options[index].style.display = 'none';
+      }
+    });
+
+  </script>
+{% endblock js %}

@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+
+{% block title %}
+  Orders
+{% endblock title %}
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'shop/CSS/bucket.css' %}">
+    <style>
+        p{
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .sel {
+            font-size: 1.3rem;
+        }
+    </style>
+{% endblock css %}
+
+{% block body %}
+<div class="cartcontainer">
+  <div class="cartitems bg">
+      <div class="heading bg">
+          <div class="headingItem"><b>Product</b></div>
+          <div class="headingItem"><b>Size</b></div>
+          <div class="headingItem"><b>Qty</b></div>
+          <div class="headingItem"><b>Subtotal</b></div>
+          <div class="headingItem wi"><b>Order</b></div>
+      </div>
+      <div class="productItem" id="itemscart">
+          {% for order in orders %}
+            <div class="row bg" style="margin-bottom: 0; border-bottom: 0;">
+                <div class="contant">
+                    <img src="{{order.ProductImg}}">
+                    <div class="det">
+                        <p class=pname>{{order.ProductName}}</p>
+                    </div>
+                </div>
+                <div class="contant">
+                    <p><strong class="subtotal tot">{{order.ProductSize}}</strong></p>
+                </div>
+                <div class="contant">
+                    <p><strong class="subtotal tot">{{order.ProductQty}}</strong></p>
+                </div>
+                <div class="contant">
+                    <p>&#x20B9;<strong class="subtotal tot">{{order.ProductPrice}}</strong></p>
+                </div>
+            </div>
+            <div class="row bg" style="margin-top: 0;">
+                <div class="contant">
+                    <p style="margin: 0;"><strong class="subtotal sel">Seller -</strong></p>
+                </div>
+                <div class="contant">
+                    <p style="margin: 0; display: none;"><strong class="subtotal sel">{{order.SellerEmail}}</strong></p>
+                </div>
+                <div class="contant">
+                    <p style="margin: 0;"><strong class="subtotal sel">{{order.SellerName}}</strong></p>
+                </div>
+                <div class="contant">
+                    <p style="margin: 0;"><strong class="subtotal sel">{{order.SellerPhone}}</strong></p>
+                </div>
+            </div>
+
+          {% endfor %}
+      </div>
+  </div>
+</div>
+{% endblock body %}
+
+{% block js %}
+
+{% endblock js %}

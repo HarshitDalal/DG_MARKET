@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;700&family=Lobster&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Bhai 2',sans-serif,cursive;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+.progilecontainer{
+    margin: 1rem 0;
+    width: 100%;
+    padding: 0 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .profilecontant{
+        display: flex;
+        width: 100%;
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
+        .userimg{
+            width: 50%;
+            .backbuttons{
+                width: 90%;
+                margin: 1rem 0;
+                padding: 1rem;
+                display: flex;
+                border-radius: 1rem;
+                justify-content: flex-start;
+                flex-direction: column;
+                .btn{
+                    color: white;
+                    background: rgb(47, 47, 235);
+                    cursor: pointer;
+                    border-radius: 1rem;
+                    outline: none;
+                    border: none;
+                    margin: 1rem 0;
+                    width: 100%;
+                    font-size: 1.5rem;
+                    padding: .7rem 1rem;
+                    font-weight: 500;
+                    text-align: center;
+                    text-decoration: none;
+
+                }
+            }
+            .img{
+                width: 90%;
+                display: flex;
+                padding: 2rem 0;
+                border-radius: 1rem;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 70%;
+                    min-height: 40rem;
+                    border-radius: 50%;
+                    
+                }
+            }
+        }
+        .userform{
+            border-radius: 1rem;
+            width: 50%;
+            form{
+                width: 100%;
+                border-radius: 1rem;
+                .userentries{
+                    width: 100%;
+                    label{
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-direction: column;
+                        width: 100%;
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                        color: rgb(97, 88, 88);
+                        .placeholder{
+                            width: 100%;
+                            font-size: 1.7rem;
+                            font-weight: 600;
+                            margin-left: 2rem;
+                            color: rgb(97, 88, 88);
+                        }
+                        input,select,textarea,.input{
+                            border-radius: 1rem;
+                            outline: none;
+                            background: white;
+                            border: none;
+                            margin: 1rem 0;
+                            width: 100%;
+                            color: rgb(85, 80, 80);
+                            font-size: 1.5rem;
+                            padding: .7rem 1rem;
+                            font-weight: 500;
+                            resize: none;
+                            text-transform: capitalize;
+                        }
+                        img#flag_id_Country {
+                            width: 2rem;
+                        }
+                        select{
+                            text-transform: none;
+                            
+                        }
+                        .input{
+                            padding: .4rem 1rem;
+
+                        }
+                        input[type="email"]{
+                            text-transform: none;
+                        }
+                        input[type=submit]{
+                            color: white;
+                            background: rgb(47, 47, 235);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .selleropen{
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 3rem;
+        a{
+            color: white;
+            background: rgb(47, 47, 235);
+            cursor: pointer;
+            border-radius: 1rem;
+            outline: none;
+            border: none;
+            margin: 1rem 0;
+            width: 100%;
+            font-size: 1.5rem;
+            padding: .7rem 1rem;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 500;
+            resize: none;
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .progilecontainer{
+        .profilecontant{
+            flex-direction: column;
+            .userimg{
+                width: 100%;
+                margin-bottom: 1rem;
+                .backbuttons{
+                    width: 100%;
+                }
+                .img{
+                    width: 100%;
+                    img{
+                        min-height: 30rem;
+                    }
+
+                }
+            }
+            .userform{
+                width: 100%;
+                .userentries{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

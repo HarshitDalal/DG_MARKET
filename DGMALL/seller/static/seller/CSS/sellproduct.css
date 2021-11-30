@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;700&family=Lobster&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --font-BalooBhai2: 'Baloo Bhai 2', cursive;
+  --font-Lobster: 'Lobster', cursive;
+}
+
+.sellproduct {
+  width: 100%;
+  margin: 1rem 0;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2.5rem;
+}
+
+.sellproduct .head {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.sellproduct .heading, .sellproduct .note {
+  font-family: var(--font-BalooBhai2);
+  font-weight: 600;
+  color: #1f8eb9;
+  font-size: 4rem;
+}
+
+.sellproduct .note {
+  font-size: 2rem;
+  color: #e9a514;
+}
+
+.sellproduct form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sellproduct .close {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #4415f0;
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sellproduct .product-image {
+  width: 50%;
+  border-top-left-radius: 2.2rem;
+  border-bottom-left-radius: 2.2rem;
+}
+
+.sellproduct .product-image .main-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 2rem;
+  width: 100%;
+  height: 40rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sellproduct .product-image .main-image #main {
+  width: 100%;
+  height: 100%;
+  padding: .5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.sellproduct .product-image .main-image #main[alt] {
+  text-align: center;
+  font-size: 5rem;
+  color: #00acee;
+  font-family: var(--font-BalooBhai2);
+}
+
+.sellproduct .product-image .contant {
+  width: 100%;
+  height: 12rem;
+  margin-top: .2rem;
+}
+
+.sellproduct .product-image .btn {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  background: #0000da;
+  padding: .4rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-family: var(--font-BalooBhai2);
+  font-weight: 500;
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+}
+
+.sellproduct .product-image .other-image {
+  margin-top: .7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 16rem;
+  padding: 0 .4rem;
+  z-index: 2;
+}
+
+.sellproduct .product-image .other-image .imgo {
+  width: 19.5%;
+  padding: .5rem;
+  margin: 0 .3rem;
+  border-radius: 2rem;
+  z-index: 2;
+  height: 100%;
+  border: 0.3rem dotted white;
+}
+
+.sellproduct .product-image .other-image .imgo .imgo1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.sellproduct .product-image .other-image .imgo.act {
+  border: .3rem solid white;
+}
+
+.sellproduct .product-image .help {
+  width: 100%;
+  font-size: 2rem;
+  font-family: var(--font-BalooBhai2);
+  font-weight: 500;
+  color: #032735;
+  text-align: center;
+  margin-top: .5rem;
+}
+
+.sellproduct .product-decp {
+  width: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 3rem;
+  font-family: var(--font-BalooBhai2);
+}
+
+.sellproduct .product-decp .product-name {
+  font-size: 2rem;
+  margin: 1rem 0;
+  width: 75%;
+}
+
+.sellproduct .product-decp .price {
+  font-size: 1.8rem;
+  margin: .5rem;
+  width: 50%;
+}
+
+.sellproduct .product-decp .price .real {
+  color: red;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sellproduct .product-decp .price .real input {
+  margin-bottom: .7rem;
+}
+
+.sellproduct .product-decp .price .discount {
+  color: lime;
+  font-weight: 600;
+}
+
+.sellproduct .product-decp .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 93%;
+  height: 60%;
+  background: #f5f5f5;
+  border-radius: 2rem;
+  margin-bottom: .6rem;
+}
+
+.sellproduct .product-decp .tabs .tab_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.sellproduct .product-decp .tabs .tabs_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.3rem;
+  width: 100%;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody .a {
+  width: cale(100%/3);
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  color: #00acee;
+  margin: 0rem 2rem;
+  cursor: pointer;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: white;
+  padding: 1rem;
+  min-width: 100%;
+  border-radius: 1.5rem;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody .info .item1 {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody .info .item1 p {
+  color: #00acee;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody .info .item2 {
+  width: 33%;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody .info .item2 input {
+  width: 36%;
+  outline: none;
+  border-radius: 1.3rem;
+  text-align: center;
+  border: none;
+  color: #00b7ff;
+  padding: 1rem;
+  font-weight: bolder;
+  background-color: #f1ecec;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody .info .item3 {
+  width: 33%;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody .info .item3 select {
+  border: none;
+  width: 50%;
+  height: 4.5rem;
+  outline: none;
+  border-radius: 1.3rem;
+  text-align: center;
+  padding: 1rem 1.3rem;
+  color: #00b4fc;
+  font-weight: bolder;
+  background-color: #f1ecec;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody .info .head {
+  color: maroon;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody table {
+  width: 100%;
+  padding: 1rem;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody table tr {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody table tr th {
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  color: crimson;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody table tr td {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #00b4fc;
+}
+
+.sellproduct .product-decp .tabs .tabs_body > .tbody table tr td select {
+  width: 100%;
+  outline: none;
+  border-radius: 1.3rem;
+  border: none;
+  color: #00b7ff;
+  padding: 1rem;
+  resize: none;
+  font-weight: bolder;
+  background-color: #f1ecec;
+}
+
+.sellproduct .product-decp .addcart {
+  width: 95%;
+  margin-top: 1.7rem;
+  text-align: center;
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  opacity: 1;
+  text-align: center;
+}
+
+.sellproduct .product-decp .addcart input[type="reset"], .sellproduct .product-decp .addcart input[type="submit"] {
+  text-decoration: none;
+  color: white;
+  width: 45%;
+  background: #0202fa;
+  padding: .9rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-family: var(--font-BalooBhai2);
+  font-weight: 500;
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+}
+
+.input, textarea {
+  width: 100%;
+  outline: none;
+  border-radius: 1.3rem;
+  border: none;
+  color: #00b7ff;
+  padding: 1rem;
+  resize: none;
+  font-weight: bolder;
+  background-color: #f1ecec;
+}
+
+input[type="color"] {
+  border-radius: 50%;
+  height: 5rem;
+  width: 35%;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  top: -15%;
+  left: 25%;
+  z-index: -1;
+  visibility: hidden;
+  margin: 0;
+  width: 10%;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 59%;
+  }
+  .sellproduct {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2rem;
+  }
+  .sellproduct form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sellproduct .product-image {
+    width: 100%;
+    margin-top: 2rem;
+    height: 75rem;
+    border-radius: 2rem;
+    background-color: rgba(116, 98, 98, 0.348);
+  }
+  .sellproduct .product-image .main-image #main {
+    width: 100%;
+  }
+  .sellproduct .product-image .other-image {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .sellproduct .product-image .other-image .imgo {
+    width: 31%;
+    margin: .5rem .3rem;
+  }
+  .sellproduct .product-image .help {
+    display: none;
+  }
+  .sellproduct .product-decp {
+    padding: 0;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    background-color: rgba(116, 98, 98, 0.348);
+    width: 100%;
+  }
+  .sellproduct .product-decp .product-name {
+    width: 95%;
+    margin-left: .5rem;
+  }
+  .sellproduct .product-decp .price {
+    width: 95%;
+  }
+  .sellproduct .product-decp .tabs {
+    width: 100%;
+  }
+  .sellproduct .product-decp .tabs .tabs_body .tbody .info .item2 input {
+    width: 66%;
+  }
+  .sellproduct .product-decp .tabs .tabs_body .tbody .info .item3 input, .sellproduct .product-decp .tabs .tabs_body .tbody .info .item3 select {
+    width: 66%;
+  }
+}

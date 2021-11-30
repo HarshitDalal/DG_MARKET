@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    Login
+{% endblock title %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'shop/CSS/login.css' %}">
+{% endblock css %}
+
+{% block body %}
+{% load socialaccount %}
+    <section class="login">
+        <div class="contantbx bg">
+            <div class="formbx">
+                <h2>Login</h2>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {% for fm in logfm %}
+                        <div class="inputbx">
+                            <span class="placeholder">{{fm.label_tag}}</span>
+                            <label for="">
+                                {{fm}}
+                            </label>
+                        </div>
+                    {% endfor %}
+                    <div class="inputbx">
+                        <input type="submit" value="Sign In">
+                    </div>
+                    <div class="inputbx">
+                        <p>Don't have an account? <a href="{% url 'registration' %}">Sign Up</a></p>
+                        <p class="center"><a href="{% url 'forgotpassword' %}">Forgot Password</a></p>
+                    </div>
+                </form>
+                <h3>Login with social media</h3>
+                <ul class="sci">
+                    <!-- <li><a href="{% provider_login_url 'facebook' %}"><i class="fab fa-facebook-f"></i></a></li> -->
+                    <li><a href="{% provider_login_url 'twitter' %}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="{% provider_login_url 'google' %}" target="_blank"><i class="fab fa-google"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock body %}
