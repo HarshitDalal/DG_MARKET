@@ -1,0 +1,7 @@
+# DG_MARKET
+E-Commerce site using django
+
+Technology used :-
+    FRONT-END > HTML5,CSS3,SCSS,JAVASCRIPT,JQUERY,SWIPER.JS
+    BACK-END > PYTHON, DJANGO
+    EDITOR > VS CODE,SUBLIME TEXT
