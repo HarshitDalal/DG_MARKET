@@ -25,7 +25,6 @@ admin.site.index_title = "DG MARKET"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('shop.urls')),
-    path('accounts/', include('allauth.urls')),
     path('seller/',include('seller.urls')),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 

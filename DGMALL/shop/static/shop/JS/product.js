@@ -32,5 +32,6 @@ productBox.forEach((list,index) =>{
     const realPrice = list.querySelector('.realprice');
     if (discountPrice.innerText.length>1) {
         realPrice.setAttribute('style','display: none;');
+        
     }
 });
