@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap");
 :root {
-  --font: 'Baloo Bhai 2', cursive;
+  --font: "Baloo Bhai 2", cursive;
   --color1: #1b9ada;
   --color2: #7ec0df;
   --color3: #f33074;
@@ -20,42 +20,27 @@ html {
 
 .login {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 0 2.5rem;
   margin: 1rem 0;
 }
-
 .login .contantbx {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
-
 .login .contantbx .formbx {
   margin: 2rem 0;
   z-index: 2;
-  background: #34355496;
+  background: rgba(52, 53, 84, 0.5882352941);
   padding: 3rem;
   width: 50%;
   border-radius: 2rem;
 }
-
 .login .contantbx .formbx h2 {
   color: var(--color1);
   font-weight: 700;
@@ -63,89 +48,71 @@ html {
   text-transform: uppercase;
   margin-bottom: 2rem;
   border-bottom: 0.4rem solid var(--color3);
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
   display: inline-block;
 }
-
 .login .contantbx .formbx .inputbx {
   margin-bottom: 2rem;
 }
-
 .login .contantbx .formbx .inputbx .placeholder {
   font-size: 1.6rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   display: inline-block;
   color: var(--color2);
   font-weight: 300;
-  letter-spacing: .06rem;
+  letter-spacing: 0.06rem;
 }
-
 .login .contantbx .formbx .inputbx label {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .login .contantbx .formbx .inputbx input {
   width: 100%;
-  padding: .6rem 1rem;
+  padding: 0.6rem 1rem;
   outline: none;
   font-weight: 400;
   font-size: 1.6rem;
   border: 0.1rem solid var(--color2);
-  letter-spacing: .07rem;
+  letter-spacing: 0.07rem;
   color: var(--white);
   background: rgba(51, 51, 51, 0.26);
   border-radius: 3rem;
 }
-
-.login .contantbx .formbx .inputbx input[type="submit"] {
+.login .contantbx .formbx .inputbx input[type=submit] {
   background: var(--color3);
   color: var(--white);
   width: 100%;
-  padding: .7rem 1rem;
+  padding: 0.7rem 1rem;
   cursor: pointer;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   font-weight: 600;
   border: none;
   outline: none;
 }
-
 .login .contantbx .formbx .inputbx p {
   font-size: 1.4rem;
   font-weight: 500;
   color: var(--color2);
 }
-
 .login .contantbx .formbx .inputbx p a {
   text-decoration: none;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   color: var(--color3);
 }
-
 .login .contantbx .formbx .inputbx p a:hover {
   text-decoration: underline;
   font-size: 1.7rem;
   font-weight: 700;
 }
-
 .login .contantbx .formbx .inputbx .center {
   margin-top: 1rem;
   text-align: center;
 }
-
 .login .contantbx .formbx .inputbx .center a {
   color: #14eb26;
 }
-
 .login .contantbx .formbx h3 {
   color: var(--color1);
   font-weight: 600;
@@ -153,35 +120,20 @@ html {
   margin: 4rem 0 1rem;
   text-align: center;
 }
-
 .login .contantbx .formbx .sci {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
 .login .contantbx .formbx .sci li {
   list-style: none;
 }
-
 .login .contantbx .formbx .sci li a {
   width: 5rem;
   height: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background: var(--color3);
   border-radius: 50%;
   cursor: pointer;

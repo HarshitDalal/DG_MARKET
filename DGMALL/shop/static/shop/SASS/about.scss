@@ -19,6 +19,7 @@ html{
     justify-content: center;
     align-items: center;
     width: 100%;
+    flex-direction: column;
     padding: 0 2.5rem;
     margin: 1rem 0;
     .container{
@@ -26,11 +27,14 @@ html{
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         .swiper-container{
             width: 30%;
         }
         .profile-cart{
-            width: 40%;
+            width: 35%;
+            margin: 1rem;
+            height: 51rem;
             background: #ecc4e0bf;
             border-radius: 2.8rem;
             padding-top: 2rem;
@@ -128,42 +132,47 @@ html{
         .profile-cart:hover .info-social{
             opacity: 0;
         }
-        .about-us {
-            width: 50%;
-            text-align: center;
-            .wave{
-                font-family: $font1;
-                font-size: 6rem;
-                .hi{
-                    color: red;
-                    line-height: .8;
-                }
+    }
+    .about-us {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        .wave{
+            font-family: $font1;
+            font-size: 6rem;
+            .hi{
+                color: red;
+                line-height: .8;
             }
-            .do{
-                font-family: $font1;
-                font-size: 2rem;
-            }
-            .btn{
-                text-decoration: none;
-                font-family: $font1;
-                font-size: 1.5rem;
-                background: rgba(199, 11, 158, 0.897);
-                padding: 0 2rem;
-                margin: 1.3rem 2rem;
-                color: rgb(240, 233, 232);
-                line-height: 3;
-                border-radius: 2rem;
-            }
-            .pera{
-                font-size: 1.4rem;
-                font-family: $font1;
-                width: 85%;
-                margin: 1rem auto;
-                word-spacing: .1rem;
-            }
-            .pera:nth-child(2n){
-                margin-top: 2rem;
-            }
+        }
+        .do{
+            font-family: $font1;
+            font-size: 2rem;
+        }
+        .btn{
+            text-decoration: none;
+            font-family: $font1;
+            font-size: 1.5rem;
+            background: rgba(199, 11, 158, 0.897);
+            padding: 0 2rem;
+            margin: 1.3rem 2rem;
+            color: rgb(240, 233, 232);
+            line-height: 3;
+            border-radius: 2rem;
+        }
+        .pera{
+            font-size: 1.4rem;
+            font-family: $font1;
+            width: 85%;
+            margin: 1rem auto;
+            word-spacing: .1rem;
+        }
+        .pera:nth-child(2n){
+            margin-top: 2rem;
         }
     }
 }

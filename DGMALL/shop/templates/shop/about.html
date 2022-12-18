@@ -5,126 +5,133 @@
 
 <!-- Add CSS Here -->
 {% block css %}
-  {% load static %}
-  <link rel="stylesheet" href=" {% static 'shop/CSS/about.css' %} ">
-  <!-- <link rel="stylesheet" href="{% static 'shop/MINCSS/about.min.css' %}"> -->
-  <style type="text/css">
-      .about .container .profile-cart .dp img {
-            border-radius: 50%;
-            width: 19rem;
-            height: 19rem;
-        }
-  </style>
+{% load static %}
+<link rel="stylesheet" href=" {% static 'shop/CSS/about.css' %} ">
+<!-- <link rel="stylesheet" href="{% static 'shop/MINCSS/about.min.css' %}"> -->
+<style type="text/css">
+    .about .container .profile-cart .dp img {
+        border-radius: 50%;
+        width: 19rem;
+        height: 19rem;
+    }
+</style>
 {% endblock css %}
 
 <!-- Add Body Here -->
 {% block body %}
 {% load static %}
-  <section class="about">
-    <div class="container bg">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-            <div class="swiper-slide profile-cart">
-                <div class="dp">
-                    <img src="https://media-exp1.licdn.com/dms/image/D5603AQHRazc1aAYgPA/profile-displayphoto-shrink_200_200/0/1669572198926?e=1675900800&v=beta&t=LjyBGBx0EIJ1-m6FKrNwPIzRY6OdN9IgAmwHqSpJqhs" alt="">
-                </div>
-                <div class="name">
-                    <h2>Harshit Dalal</h2>
-                </div>
-                <div class="skills">
-                    <div class="line"></div>
-                    <p class="font-p">Back-End Developer</p>
-                </div>
-                <div class="info-social">
-                    <p class="info-p">You Also Follow Me On My Social Handels</p>
-                </div>
-                <div class="social">
-                    <a class="hendal" target="_blank" href="https://www.facebook.com/harshit.dalal.967/"><i class="fab fa-facebook-f"></i></a>
-                    <a class="hendal" target="_blank" href="https://twitter.com/HarshitDalal14"><i class="fab fa-twitter"></i></a>
-                    <a class="hendal" target="_blank" href="https://www.linkedin.com/in/harshit-dalal-5646951b6/"><i class="fab fa-linkedin-in"></i></a>
-                    <a  class="hendal" target="_blank" href="https://github.com/HarshitDalal/"><i class="fab fa-github"></i></a>                
-                </div>
-            </div>
-            <div class="swiper-slide profile-cart">
-                <div class="dp">
-                    <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHL_HWGdRPwfg/profile-displayphoto-shrink_200_200/0/1658654473382?e=1675900800&v=beta&t=ROvMLZf3DkCtS0yHqY0PPi29ur1MLCBEBfIsN_CGyNk" alt="">
-                </div>
-                <div class="name">
-                    <h2>Mayank Shrikhande</h2>
-                </div>
-                <div class="skills">
-                    <div class="line"></div>
-                    <p class="font-p">Front-End Developer</p>
-                </div>
-                <div class="info-social">
-                    <p class="info-p">You Also Follow Me On My Social Handels</p>
-                </div>
-                <div class="social">
-                    <a class="hendal" target="_blank" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="hendal" target="_blank" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="hendal" target="_blank" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a  class="hendal" target="_blank" href=""><i class="fab fa-github"></i></a>                
-                </div>
-            </div>
-            <div class="swiper-slide profile-cart">
-                <div class="dp">
-                    <img src="https://media-exp1.licdn.com/dms/image/D5603AQGyrWXkEJ-Niw/profile-displayphoto-shrink_200_200/0/1669030858149?e=1675900800&v=beta&t=QbqxGyQVO2j6R1MDBwjzezS_xmrL1l3HqKM2v6GYEJM" alt="">
-                </div>
-                <div class="name">
-                    <h2>Harshal Choudhary</h2>
-                </div>
-                <div class="skills">
-                    <div class="line"></div>
-                    <p class="font-p">Back-End Developer</p>
-                </div>
-                <div class="info-social">
-                    <p class="info-p">You Also Follow Me On My Social Handels</p>
-                </div>
-                <div class="social">
-                    <a class="hendal" target="_blank" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="hendal" target="_blank" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="hendal" target="_blank" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a  class="hendal" target="_blank" href=""><i class="fab fa-github"></i></a>                
-                </div>
-            </div>
-            <div class="swiper-slide profile-cart">
-                <div class="dp">
-                    <img src="https://media-exp1.licdn.com/dms/image/C5603AQEYwJdbXO4xWQ/profile-displayphoto-shrink_200_200/0/1652189939699?e=1675900800&v=beta&t=wAo4oDGVMLPF0jDux--RzRXai1Wcl5spn3IJBUmQcFY" alt="">
-                </div>
-                <div class="name">
-                    <h2>Kapil Pandya</h2>
-                </div>
-                <div class="skills">
-                    <div class="line"></div>
-                    <p class="font-p">Front-End Developer</p>
-                </div>
-                <div class="info-social">
-                    <p class="info-p">You Also Follow Me On My Social Handels</p>
-                </div>
-                <div class="social">
-                    <a class="hendal" target="_blank" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="hendal" target="_blank" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="hendal" target="_blank" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a  class="hendal" target="_blank" href=""><i class="fab fa-github"></i></a>                
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            </div>
-        </div>
-        <div class="about-us">
-            <h1 class="wave">HI <span class="hi">!</span></h1>
-            <h2 class="do">Here's who I am & what I do ?</h2>
-            
-            <a class="btn" href="{% url 'contact' %}">Contact</a>
-            <p class="pera">Lorem, ipsum dolor Lorem ipsum dolor sit amet. sit amet consectetur adipisicing elit. Beatae eaque eligendi quia ad dolorum labore necessitatibus voluptate consequuntur ipsam, vel esse atque sed corrupti enim.</p>
-            <p class="pera">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, at porro consequatur animi perspiciatis tempora.</p>
-        </div>
+<section class="about">
+    <div class="about-us container bg">
+        <h1 class="wave">HI <span class="hi">!</span></h1>
+        <h2 class="do">Here's who I am & what I do ?</h2>
+        <br>
+        <a class="btn" href="{% url 'contact' %}">Contact</a>
+        <p class="pera">Lorem, ipsum dolor Lorem ipsum dolor sit amet. sit amet consectetur adipisicing elit. Beatae
+            eaque eligendi quia ad dolorum labore necessitatibus voluptate consequuntur ipsam, vel esse atque sed
+            corrupti enim.</p>
+        <p class="pera">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, at porro consequatur animi
+            perspiciatis tempora.</p>
     </div>
-  </section>
+    <div class="container bg">
+
+        <div class="swiper-slide profile-cart">
+            <div class="dp">
+                <img src="https://media-exp1.licdn.com/dms/image/D5603AQHRazc1aAYgPA/profile-displayphoto-shrink_200_200/0/1669572198926?e=1675900800&v=beta&t=LjyBGBx0EIJ1-m6FKrNwPIzRY6OdN9IgAmwHqSpJqhs"
+                    alt="">
+            </div>
+            <div class="name">
+                <h2>Harshit <br>Dalal</h2>
+            </div>
+            <div class="skills">
+                <div class="line"></div>
+                <p class="font-p">Back-End Developer</p>
+            </div>
+            <div class="info-social">
+                <p class="info-p">You Also Follow Me On My Social Handels</p>
+            </div>
+            <div class="social">
+                <a class="hendal" target="_blank" href="https://www.facebook.com/harshit.dalal.967/"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="hendal" target="_blank" href="https://twitter.com/HarshitDalal14"><i
+                        class="fab fa-twitter"></i></a>
+                <a class="hendal" target="_blank" href="https://www.linkedin.com/in/harshit-dalal-5646951b6/"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="hendal" target="_blank" href="https://github.com/HarshitDalal/"><i
+                        class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="swiper-slide profile-cart">
+            <div class="dp">
+                <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHL_HWGdRPwfg/profile-displayphoto-shrink_200_200/0/1658654473382?e=1675900800&v=beta&t=ROvMLZf3DkCtS0yHqY0PPi29ur1MLCBEBfIsN_CGyNk"
+                    alt="">
+            </div>
+            <div class="name">
+                <h2>Mayank <br>Shrikhande</h2>
+            </div>
+            <div class="skills">
+                <div class="line"></div>
+                <p class="font-p">Front-End Developer</p>
+            </div>
+            <div class="info-social">
+                <p class="info-p">You Also Follow Me On My Social Handels</p>
+            </div>
+            <div class="social">
+                <a class="hendal" target="_blank" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="hendal" target="_blank" href=""><i class="fab fa-twitter"></i></a>
+                <a class="hendal" target="_blank" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="hendal" target="_blank" href=""><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="swiper-slide profile-cart">
+            <div class="dp">
+                <img src="https://media-exp1.licdn.com/dms/image/D5603AQGyrWXkEJ-Niw/profile-displayphoto-shrink_200_200/0/1669030858149?e=1675900800&v=beta&t=QbqxGyQVO2j6R1MDBwjzezS_xmrL1l3HqKM2v6GYEJM"
+                    alt="">
+            </div>
+            <div class="name">
+                <h2>Harshal <br>Choudhary</h2>
+            </div>
+            <div class="skills">
+                <div class="line"></div>
+                <p class="font-p">Back-End Developer</p>
+            </div>
+            <div class="info-social">
+                <p class="info-p">You Also Follow Me On My Social Handels</p>
+            </div>
+            <div class="social">
+                <a class="hendal" target="_blank" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="hendal" target="_blank" href=""><i class="fab fa-twitter"></i></a>
+                <a class="hendal" target="_blank" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="hendal" target="_blank" href=""><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="swiper-slide profile-cart">
+            <div class="dp">
+                <img src="https://media-exp1.licdn.com/dms/image/C5603AQEYwJdbXO4xWQ/profile-displayphoto-shrink_200_200/0/1652189939699?e=1675900800&v=beta&t=wAo4oDGVMLPF0jDux--RzRXai1Wcl5spn3IJBUmQcFY"
+                    alt="">
+            </div>
+            <div class="name">
+                <h2>Kapil <br>Pandya</h2>
+            </div>
+            <div class="skills">
+                <div class="line"></div>
+                <p class="font-p">Front-End Developer</p>
+            </div>
+            <div class="info-social">
+                <p class="info-p">You Also Follow Me On My Social Handels</p>
+            </div>
+            <div class="social">
+                <a class="hendal" target="_blank" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="hendal" target="_blank" href=""><i class="fab fa-twitter"></i></a>
+                <a class="hendal" target="_blank" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="hendal" target="_blank" href=""><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+</section>
 {% endblock body %}
 
 <!-- Add JS Here -->
 {% block js %}
-  {% load static %}
-  <script src="{% static 'shop/JS/about.js' %}"></script>
+{% load static %}
+<script src="{% static 'shop/JS/about.js' %}"></script>
 {% endblock js %}

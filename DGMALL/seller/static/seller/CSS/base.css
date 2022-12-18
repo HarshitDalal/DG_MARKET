@@ -2,9 +2,8 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Baloo Bhai 2',sans-serif,cursive;
+  box-sizing: border-box;
+  font-family: "Baloo Bhai 2", sans-serif, cursive;
 }
 
 html {
@@ -15,59 +14,33 @@ html {
   margin: 1rem 0;
   width: 100%;
   padding: 0 2.3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .progilecontainer .profilecontant {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 2rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .progilecontainer .profilecontant .userimg {
   width: 50%;
 }
-
 .progilecontainer .profilecontant .userimg .backbuttons {
   width: 90%;
   margin: 1rem 0;
   padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 1rem;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: flex-start;
+  flex-direction: column;
 }
-
 .progilecontainer .profilecontant .userimg .backbuttons .btn {
   color: white;
-  background: #2f2feb;
+  background: rgb(47, 47, 235);
   cursor: pointer;
   border-radius: 1rem;
   outline: none;
@@ -75,72 +48,51 @@ html {
   margin: 1rem 0;
   width: 100%;
   font-size: 1.5rem;
-  padding: .7rem 1rem;
+  padding: 0.7rem 1rem;
   font-weight: 500;
   text-align: center;
   text-decoration: none;
 }
-
 .progilecontainer .profilecontant .userimg .img {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 2rem 0;
   border-radius: 1rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .progilecontainer .profilecontant .userimg .img img {
   width: 70%;
   min-height: 40rem;
   border-radius: 50%;
 }
-
 .progilecontainer .profilecontant .userform {
   border-radius: 1rem;
   width: 50%;
 }
-
 .progilecontainer .profilecontant .userform form {
   width: 100%;
   border-radius: 1rem;
 }
-
 .progilecontainer .profilecontant .userform form .userentries {
   width: 100%;
 }
-
 .progilecontainer .profilecontant .userform form .userentries label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: flex-start;
+  flex-direction: column;
   width: 100%;
   font-size: 1.3rem;
   font-weight: 500;
-  color: #615858;
+  color: rgb(97, 88, 88);
 }
-
 .progilecontainer .profilecontant .userform form .userentries label .placeholder {
   width: 100%;
   font-size: 1.7rem;
   font-weight: 600;
   margin-left: 2rem;
-  color: #615858;
+  color: rgb(97, 88, 88);
 }
-
 .progilecontainer .profilecontant .userform form .userentries label input, .progilecontainer .profilecontant .userform form .userentries label select, .progilecontainer .profilecontant .userform form .userentries label textarea, .progilecontainer .profilecontant .userform form .userentries label .input {
   border-radius: 1rem;
   outline: none;
@@ -148,53 +100,40 @@ html {
   border: none;
   margin: 1rem 0;
   width: 100%;
-  color: #555050;
+  color: rgb(85, 80, 80);
   font-size: 1.5rem;
-  padding: .7rem 1rem;
+  padding: 0.7rem 1rem;
   font-weight: 500;
   resize: none;
   text-transform: capitalize;
 }
-
 .progilecontainer .profilecontant .userform form .userentries label img#flag_id_Country {
   width: 2rem;
 }
-
 .progilecontainer .profilecontant .userform form .userentries label select {
   text-transform: none;
 }
-
 .progilecontainer .profilecontant .userform form .userentries label .input {
-  padding: .4rem 1rem;
+  padding: 0.4rem 1rem;
 }
-
-.progilecontainer .profilecontant .userform form .userentries label input[type="email"] {
+.progilecontainer .profilecontant .userform form .userentries label input[type=email] {
   text-transform: none;
 }
-
 .progilecontainer .profilecontant .userform form .userentries label input[type=submit] {
   color: white;
-  background: #2f2feb;
+  background: rgb(47, 47, 235);
   cursor: pointer;
 }
-
 .progilecontainer .selleropen {
   margin: 1rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 1rem 3rem;
 }
-
 .progilecontainer .selleropen a {
   color: white;
-  background: #2f2feb;
+  background: rgb(47, 47, 235);
   cursor: pointer;
   border-radius: 1rem;
   outline: none;
@@ -202,7 +141,7 @@ html {
   margin: 1rem 0;
   width: 100%;
   font-size: 1.5rem;
-  padding: .7rem 1rem;
+  padding: 0.7rem 1rem;
   text-align: center;
   text-decoration: none;
   font-weight: 500;
@@ -211,10 +150,7 @@ html {
 
 @media screen and (max-width: 768px) {
   .progilecontainer .profilecontant {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .progilecontainer .profilecontant .userimg {
     width: 100%;

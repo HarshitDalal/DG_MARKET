@@ -3,7 +3,7 @@ from shop.models import ProductsDetails
 from django.contrib.admin.views.decorators import staff_member_required
 from seller.forms import SellRequest,SellerForm,ProductForm
 from seller.models import SellerDetails,SellerReq
-from django.core.mail import send_mail,send_mass_mail
+from django.core.mail import send_mass_mail
 from django.contrib import messages
 from DGMALL.settings import EMAIL_HOST_USER
 
@@ -58,26 +58,7 @@ def sellProduct(request):
         Seller_Email = request.POST['email']
         Seller_Mobile = request.POST['phone']
         Seller_Address = request.POST['shop_address']
-        productFill = ProductsDetails(
-            Product_Name=Product_Name,
-            Cateogry=Cateogry,
-            Price=Price,
-            Discount=Discount,
-            Quantity=Quantity,
-            Size = Size,
-            Color = Color,
-            Small_Decription=Small_Decription,
-            Main_Image=Main_Image,
-            image_2=image_2,
-            image_3=image_3,
-            image_4=image_4,
-            image_5=image_5,
-            Details=Details,
-            Seller=Seller,
-            Seller_Email = Seller_Email,
-            Seller_Mobile = Seller_Mobile,
-            Seller_Address = Seller_Address
-        )
+        productFill = ProductsDetails(Product_Name=Product_Name,Cateogry=Cateogry,Price=Price,Discount=Discount,Quantity=Quantity,Size = Size,Color = Color,Small_Decription=Small_Decription,Main_Image=Main_Image,image_2=image_2,image_3=image_3,image_4=image_4,image_5=image_5,Details=Details,Seller=Seller,Seller_Email = Seller_Email,Seller_Mobile = Seller_Mobile,Seller_Address = Seller_Address)
         try:
             productFill.save()
             messages.success(request,'Product Added Succesefuly')
@@ -86,9 +67,6 @@ def sellProduct(request):
     else:
         fm = ProductForm()
     return render(request,'seller/sellproduct.html',{'fm':fm})
-            
-        
-
 
 def sellerLogin(request):
     # Seller_D = request.user.SellerDetails
